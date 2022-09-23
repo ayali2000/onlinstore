@@ -241,9 +241,9 @@ body{
 }
 
 .rotatehome{
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
     animation: rotation 6s;
 }
 
