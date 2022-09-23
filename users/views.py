@@ -12,7 +12,7 @@ def signup(request):
             frm.save()
             frm.clean()
             messages.success(request,'Account created successfully')
-            return redirect('signup')
+            return redirect('login')
         else:
             messages.success(request,'Account not created')                
     else:

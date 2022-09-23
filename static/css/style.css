@@ -240,6 +240,13 @@ body{
     border-bottom-right-radius:20px;
 }
 
+.rotatehome{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    animation: rotation 6s;
+}
+
 .rotateblog{
     width: 200px;
     height: 200px;
