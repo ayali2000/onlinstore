@@ -1,0 +1,366 @@
+/* General index css*/
+*{
+    margin:0;
+    padding:0px;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+}
+
+.hove{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url('\\media\\photo_2022-09-09_15-08-37.jpg');
+    object-fit: cover;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    height: 70vh;
+}
+
+
+
+.hove:hover{
+    background-color: orange;
+}
+
+#phonenavbar{
+    background-color: orange;
+}
+
+.navbarr{
+    display: flex;
+    height: 75px;
+    margin: auto;
+}
+
+.logo{
+    float: left;
+    width: 50px;
+    color: orange;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-top: 15px;
+    font-family: 'Times New Roman';
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    margin-top: 30;
+}
+
+.menu ul{
+    width: 100%;
+    margin-top:40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-right: 40px;
+    border-width: 1px;
+    border-style:dashed;
+    border-radius: 10px;
+    border-color: orange;
+    font-size: 20px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    margin:10px;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+.menu ul li a:hover{
+    color: orange;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    color:white;
+    height:auto;
+}
+
+.content .head{
+    font-family:'Times New Roman';
+    font-size:50px;
+    margin-top: 4%;
+    text-align: center;
+}
+
+.par{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+    letter-spacing: 1.27px;
+    line-height: 15px;
+    text-align: center;
+}
+#bt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background-color: orange;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin:20px;
+    transition:.4s ease;
+}
+
+.content .cn:hover{
+    background-color: white;
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: black;
+    transition:.4s ease;
+}
+
+.content .cn:hover{
+    background-color: white;
+}
+
+.foot{
+    display: flex;
+    background-color: orange;
+    height: 30vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.foott{
+    display:flex;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#foottrow{
+    display:flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+#foottcol{
+    display:flex;
+    text-decoration: underline;
+    justify-content: center;
+}
+
+.foottpa{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.soc{
+    width:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soc ul li{
+    list-style: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.soc ul li a{
+    text-decoration: none;
+}
+
+.socimg{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px;
+}
+/* General index css end*/
+
+#pro{
+    border-radius: 20px;
+}
+
+#basenav{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: lightcyan;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+#shab{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: white;
+    font-size: 30px;
+}
+
+.afnav{
+    height: 150px;
+    width: 100%;
+    background-color: rgb(254, 169, 10);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius:20px;
+}
+
+#search{
+    width: 220px;
+    border-radius: 20px;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+#disp{
+    background-color: orange;
+}
+
+#primg{
+    border-radius: 5px;
+    margin-top: 5px;
+    object-fit: cover;
+    height: 200px;
+}
+
+#bbt{
+    border-radius: 40px;
+}
+
+#desc{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 4px;
+    font-family: 'Calibri';
+    line-height: 17px;
+}
+
+
+#line{
+    max-height: 10px;
+}
+
+#phone{
+    height: 120px;
+    width: 120px;
+}
+
+#loc{
+    color: orange;
+    line-height: 1px;
+}
+
+#det{
+    object-fit: cover;
+}
+
+#descphone{
+    height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 4px;
+    font-family: 'Calibri';
+    line-height: 17px;
+}
+
+
+#bgimg{
+    background-image: url("/media/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+#hove:hover{
+   box-shadow: 1px 1px 1px 1px;
+}
+
+#head{
+    border-radius: 20px;
+}
+
+#homebar{
+    display: flex;
+}
+
+/* blog */
+#rowid{
+    display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+#leftside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width:25vw;
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+#rightside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    float: right;
+    position: fixed;
+}
+
+#comemail{
+    height: 300px;
+}
+
+#comtext{
+    height: 300px;
+}
+
+
+#blogp{
+    font-family: 'Arial';
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 30px;
+    
+}
+
+/* end of blog */
