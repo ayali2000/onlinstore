@@ -47,12 +47,13 @@ Shabri store
                             <center>
                             <p class='mb-0'><mute>{{i.Name}}</mute></p>
                             </center>
-                            <a href="{% url 'phone_detail' i.pk %}"><img class='w-100'src="{{ i.image.url }}" alt="" id="primg"></a>
+                            <a href="{% url 'phone_detail' i.pk %}"><img class='w-100'src="{{ i.image.url }}" alt="" id="primg">
                             <div class='px-2'>
                                 <p id='desc'>{{i.Description}}</p>
                                 <p id='loc'><strong>Ghs</strong> {{i.Price}}</p>
                                 <p id='loc'><strong>Loc:</strong> {{i.Location}}</p>
                             </div>
+                            </a>
                         </div>
                     </div>
                 {% endfor %}
@@ -78,12 +79,13 @@ Shabri store
                             <center>
                             <p class='mb-0'><mute>{{i.Name}}</mute></p>
                             </center>
-                            <a href="{% url 'phone_detail' i.pk %}"><img class='w-100'src="{{ i.image.url }}" alt="" id="primg"></a>
+                            <a href="{% url 'phone_detail' i.pk %}"><img class='w-100'src="{{ i.image.url }}" alt="" id="primg">
                             <div class=' px-2'>
                                 <p id='desc'>{{i.Description}}</p>
                                 <p id='loc'><strong>Ghs</strong> {{i.Price}}</p>
                                 <p id='loc'><strong>Loc:</strong> {{i.Location}}</p>
                             </div>
+                            </a>
                         </div>
                     </div>
                 {% endfor %}
@@ -109,12 +111,13 @@ Shabri store
                             <center>
                             <p class='mb-0'><mute>{{i.Name}}</mute></p>
                             </center>
-                            <a href="{% url 'phone_detail' i.pk %}"><img class='w-100'src="{{ i.image.url }}" alt="" id="primg"></a>
+                            <a href="{% url 'phone_detail' i.pk %}"><img class='w-100'src="{{ i.image.url }}" alt="" id="primg">
                             <div class='px-1'>
                                 <p id='desc'>{{i.Description}}</p>
                                 <p id='loc'><strong>Ghs</strong> {{i.Price}}</p>
                                 <p id='loc'><strong>Loc:</strong> {{i.Location}}</p>
                             </div>
+                            </a>
                         </div>
                     </div>
                 {% endfor %}
@@ -144,8 +147,9 @@ Shabri store
                             <div class='px-2'>
                                 <p id='desc'>{{i.Description}}</p>
                                 <p id='loc'><strong>Ghs</strong> {{i.Price}}</p>
-                                <p id='loc'><strong>Loc:</strong> {{i.Location}}</p>
+                                <p id='loc'><strong>Loc:</strong> {{i.Location}}
                             </div>
+                            </a>
                         </div>
                     </div>
                 {% endfor %}
@@ -160,12 +164,13 @@ Shabri store
             <div class='col mb-3 px-0'>
                 <div class='card-body bg-light'>
                     <p><center><h2>{{i.Name}}</h2></center></p>
-                    <a href="{% url 'phone_detail' i.pk %}"><img class='w-100' src="{{ i.image.url }}" alt="" id="primg"></a>
+                    <a href="{% url 'phone_detail' i.pk %}"><img class='w-100' src="{{ i.image.url }}" alt="" id="primg">
                     <div class=''>
                         <p id='desc'>{{i.Description}}</p>
                         <p id='loc'><strong>Ghs</strong> {{i.Price}}</p>
                         <p id='loc'><strong>Loc:</strong> {{i.Location}}</p>
                     </div>
+                    </a>
                 </div>
             </div>
         {% endfor %}

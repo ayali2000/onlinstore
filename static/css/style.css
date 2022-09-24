@@ -14,7 +14,7 @@ body{
 
 .hove{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url('\\media\\photo_2022-09-09_15-08-37.jpg');
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url('/media/photo_2022-09-09_15-08-37.jpg');
     object-fit: cover;
     background-position: center;
     object-fit: cover;
@@ -306,6 +306,8 @@ body{
 #desc{
     overflow-wrap: break-word;
     overflow:hidden;
+    text-decoration: none;
+    color:black;
     display: -webkit-box;
     -webkit-line-clamp:4;
     -webkit-box-orient:vertical;

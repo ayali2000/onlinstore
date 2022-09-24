@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SHABRISITE_SECRET_KEY','optional default value')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['shabri.herokuapp.com']
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'users',
     'blogApp',
     'widget_tweaks',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -115,7 +116,7 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
-USE_I18N = True
+USE_I18N = False
 
 USE_TZ = True
 
@@ -124,13 +125,41 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
+#aws configuration
+AWS_ACCESS_KEY_ID = 'AKIATAYKTCRBZXTXU3F3' 
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'shabribaskets'
+AWS_S3_REGION = 'eu-west-1'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'  
+AWS_S3_HOST = f's3.{AWS_S3_REGION}.amazonaws.com'
+AWS_DEFAULT_ACL = 'public-read'
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+AWS_LOCATION = 'static'
+AWS_QUERYSTRING_AUTH = False
+
+AWS_HEADERS={
+    'Access-Control-Allow-Origin':'*'
+}
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'store'
-STATIC_URL = 'static/'
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

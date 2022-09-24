@@ -34,7 +34,7 @@
                             </div>
                             <div class='col col-7'>
                                 <div class="row">
-                                <p id='descphone'>{{i.Description}}</p>
+                                <p id='descphone'><a href="{% url 'phone_detail' i.pk %}">{{i.Description}}</a></p>
                                 </div>
                                 <div class="row">
                                     <div class='col'>
@@ -63,7 +63,7 @@
                             </div>
                             <div class='col col-7'>
                                 <div class="row">
-                                <p id='descphone'>{{i.Description}}</p>
+                                <p id='desc'><a href="{% url 'phone_detail' i.pk %}">{{i.Description}}</a></p>
                                 </div>
                                 <div class="row">
                                     <div class='col'>
