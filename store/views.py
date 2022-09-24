@@ -69,9 +69,7 @@ def sell(request):
             messages.success(request,'Item posted')
             return redirect('sell')
         else:
-            for error in frm.errors:
-                print(error)
-            messages.success(request,'Item not posted')
+            messages.error(request,'Item not posted')
             frm = SellForm()
     context = {'frm':frm}    
     return render(request,'store/sell.html',context)    

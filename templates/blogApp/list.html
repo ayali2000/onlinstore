@@ -1,10 +1,11 @@
 {% extends 'partial/base.html' %}
+{% load static %}
 {% block content %}
 {% include "partial/nav.html" %}
 <div class="d-block d-lg-none"> 
     <div class = 'afnav'>
     <div class='d-block d-lg-none d-md-none'>
-        <img class='rotate linear infinite' src='/media/pro.png' alt=''>
+        <img class='rotate linear infinite' src="{% static 'media/pro.png' %}" alt=''>
     </div>   
     </div>
     <div class='car'>
@@ -64,7 +65,7 @@
             </div>
             <div class=''><br><br><br>
                 <center>
-                <img class='rotateblog linear infinite' src='/media/pro.png' alt=''>
+                <img class='rotateblog linear infinite' src="{% static 'media/pro.png' %}" alt=''>
                 </center>
             </div>
         </div>

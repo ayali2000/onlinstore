@@ -1,11 +1,12 @@
 {% extends 'partial/base.html' %}
+{% load static %}
 {% block content %}
 {% include 'partial/nav.html'%}
 <div class='col-lg-7 offset-lg-5 mb-5'>
     <div class="col afnav"> 
         <div>
             <div class='d-block d-lg-none d-md-none'>
-                <img class='rotate linear infinite' src='/media/pro.png' alt=''>
+                <img class='rotate linear infinite' src="{% static 'media/pro.png' %}" alt=''>
             </div>
             <div class='col col-lg-6 d-none d-lg-block d-md-block'>
                 <form class="d-flex" id="search" method="GETS" action=".">
@@ -34,7 +35,7 @@
                             </div>
                             <div class='col col-7'>
                                 <div class="row">
-                                <p id='desc'><a href="{% url 'phone_detail' i.pk %}">{{i.Description}}</a></p>
+                                <p id='desc'><a style="text-decoration:none; color:black;" href="{% url 'phone_detail' i.pk %}">{{i.Description}}</a></p>
                                 </div>
                                 <div class="row">
                                     <div class='col'>
@@ -57,7 +58,7 @@
                     <div class="card mt-3 col-lg-6">
                         <div class="row">
                             <div class='col col-4'>
-                                <a href="{% url 'phone_detail' i.pk %}"><img src="{{ i.image.url }}" alt="" id="phone"></a>
+                                <a style="text-decoration:none; color:black;" href="{% url 'phone_detail' i.pk %}"><img src="{{ i.image.url }}" alt="" id="phone"></a>
                             </div>
                             <div class='col col-8'>
                                 <div class="row" id='me'>

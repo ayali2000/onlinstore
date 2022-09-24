@@ -319,6 +319,10 @@ body{
 
 }
 
+#descnone{
+    text-decoration: none;
+}
+
 .orderform{
     display: flex;
     position: fixed;
