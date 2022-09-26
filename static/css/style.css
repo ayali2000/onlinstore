@@ -103,7 +103,7 @@ body{
 
 .content .head{
     font-family:'Times New Roman';
-    font-size:50px;
+    font-size:70px;
     margin-top: 4%;
     text-align: center;
 }
@@ -248,8 +248,8 @@ body{
 }
 
 .rotateblog{
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     border-radius: 100px;
     animation: rotation 6s;
 }
@@ -309,7 +309,7 @@ body{
     text-decoration: none;
     color:black;
     display: -webkit-box;
-    -webkit-line-clamp:4;
+    -webkit-line-clamp:3;
     -webkit-box-orient:vertical;
     margin-top: 4px;
     font-family: 'Calibri';
@@ -340,7 +340,6 @@ body{
 #loc{
     color: orange;
     line-height: 1px;
-    font-weight:lighter;
 }
 
 #det{

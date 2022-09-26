@@ -64,7 +64,7 @@ def sell(request):
         frm = SellForm(request.POST)
         if frm.is_valid():
             instance=frm.save(commit=False)
-            instance.image = img
+            instance.image = "products/"+ img
             instance.save()
             messages.success(request,'Item posted')
             return redirect('sell')

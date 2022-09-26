@@ -8,7 +8,7 @@ from store.models import OrderItem
 class SellForm(forms.ModelForm):
     class Meta:
         model = Items
-        fields = ['Name','Category','Description','Price','Location','number']
+        fields = ['Name','Category','Description','Price','Location','number',]
     
     Name = forms.CharField(widget=forms.TextInput(attrs={
         'class':'form-control',
