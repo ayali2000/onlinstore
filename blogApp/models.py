@@ -5,9 +5,9 @@ from django.db import models
 class Post(models.Model):
     post_id = models.PositiveIntegerField(primary_key=True)
     title = models.CharField(max_length=100)
-    intro = models.TextField()
-    file = models.FileField()
-    body = models.TextField()
+    intro = models.TextField(null = True, blank =True)
+    file = models.FileField(null = True, blank =True)
+    is_Video = models.BooleanField(default=False)
     date_added = models.DateTimeField(auto_now_add=True)
     
     def __str__ (self):
@@ -15,6 +15,15 @@ class Post(models.Model):
     
     class Meta:
         ordering = ['-date_added']
+        
+class More_post(models.Model):
+    post = models.ForeignKey(Post,on_delete=models.CASCADE)
+    body = models.TextField(null = True, blank =True)
+    file = models.FileField(null = True, blank =True)
+    date_added = models.DateTimeField(auto_now_add=True) 
+    
+    class Meta:
+        ordering = ['date_added']       
         
 class Comment(models.Model):
     post = models.ForeignKey(Post,on_delete=models.CASCADE)

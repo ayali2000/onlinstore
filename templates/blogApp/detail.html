@@ -10,12 +10,25 @@
     <div class='card'>
         <div class='card-body'>
         <p id='blogp'>{{ detail_post.intro}}</p>
-        </div><br>
+        </div>
+        {% if detail_post.is_Video %}
+        <div class=''>
+            <video class='w-100' autoplay="autoplay" controls="controls" height='300px' preload="preload">
+                <source src="{{ detail_post.file.url }}" type="video/mp4" ></source>
+            </video><br>
+        </div>
+        {% else %}
         <div class='card-body'>
             <img class='w-100' src="{{ detail_post.file.url }}" alt='' height='300px'>
-        </div><br>
+        </div>
+        {% endif %}
         <div class='card-body'>
-        <p id='blogp'>{{ detail_post.body}}</p>
+            {% for i in detail_more_post %}
+            <p id='blogp'>{{ i.body}}</p>
+            {% if i.file%}
+                <img class='w-100' src="{{ i.file.url }}" alt='' height='300px'>
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -31,12 +44,26 @@
                     <p id='blogp'>
                         {{ detail_post.intro}}
                     </p><br>
-                    <div>
-                        <img class='w-100' src="{{ detail_post.file.url }}" alt='' height='300px' id='contentimg'>
+                    {% if detail_post.is_Video %}
+                    <div class=''>
+                        <video class='w-100' autoplay="autoplay" controls="controls" height='300px' preload="preload">
+                            <source src="{{ detail_post.file.url }}" type="video/mp4" ></source>
+                        </video><br>
+                    </div>
+                    {% else %}
+                    <div class='card-body'>
+                        <img class='w-100' src="{{ detail_post.file.url }}" alt='' height='300px'>
                     </div><br>
-                    <p id='blogp'>
-                    {% lorem 1 b random %}
-                    </p>
+                    {% endif %}
+                    <div class='card-body'>
+                        {% for i in detail_more_post %}
+                        <p id='blogp'>{{ i.body}}</p>
+                        {% if i.file %}
+                        <img class='w-100' src="{{ i.file.url }}" alt='' height='300px'>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    <br><br>
                     <div class="d-block d-lg-none">
                         <div class="w-100">
                             {% if messages%}

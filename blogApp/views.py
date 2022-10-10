@@ -26,9 +26,11 @@ def detail(request,pk):
     all_posts = Post.objects.all()
     ten_post = Post.objects.all()[:10]
     detail_post = Post.objects.get(pk=pk)
+    detail_more_post = More_post.objects.filter(post=detail_post)
     comment_post = Comment.objects.filter(post=detail_post)
     count_comment = comment_post.count
     context={'all_posts':all_posts,
+             'detail_more_post':detail_more_post,
              'ten_post':ten_post,
              'comment_post':comment_post,
              'count_comment':count_comment,
