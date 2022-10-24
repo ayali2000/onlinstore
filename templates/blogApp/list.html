@@ -14,7 +14,17 @@
         {% if not query%}
         {% for i in all_posts %}
         <div class='col card-body shadow py-1 mb-2'>
-            <img class='w-100' src="{{i.file.url}}" alt='' height='250px' style='object-fit:cover;'>
+            {% if i.is_Video %}
+            <div class=''>
+                <video class='w-100' autoplay="autoplay" controls="controls" height='250px' preload="preload">
+                    <source src="{{ i.file.url }}" type="video/mp4" ></source>
+                </video><br>
+            </div>
+            {% else %}
+            <div class='card-body'>
+                <img class='w-100' src="{{i.file.url}}" alt='' height='250px' style='object-fit:cover;'>
+            </div><br>
+            {% endif %}
             <br>
             <p id='desc'>{{i.title}}</h1></p>
             <div class='d-flex w-100 px-2' style='justify-content: space-between;'>
@@ -77,7 +87,15 @@
                 {% if not query%}
                 {% for i in all_posts %}
                 <div class='card col card-body shadow py-1 px-0 mb-1 mx-1'>
-                    <img class='w-100' src="{{i.file.url}}" alt='' height='100px' style='object-fit:cover;'>
+                    {% if i.is_Video %}
+                    <div class=''>
+                        <video class='w-100' autoplay="autoplay" controls="controls" height='100px' preload="preload">
+                            <source src="{{ i.file.url }}" type="video/mp4" ></source>
+                        </video><br>
+                    </div>
+                    {% else %}
+                        <img class='w-100' src="{{i.file.url}}" alt='' height='100px' style='object-fit:cover;'>
+                    {% endif %}
                     <p class='my-0 mx-1' id='desc'>{{i.intro}}</p>
                     <div class='d-flex w-100' style='justify-content: space-between;'>
                     <button class='btn btn-primary px-0 py-1' style='background-color:orange;'><a href="{% url 'detail' i.pk %}" style='text-decoration:none;'> read more</a>
@@ -92,8 +110,16 @@
                     {% if query %}
                     {% if result %}
                         {% for i in result %}
-                        <div class='card col card-body shadow py-1 px-0 mb-1 mx-1'>
-                            <img class='w-100' src="{{i.file.url}}" alt='' height='100px' style='object-fit:cover;'>
+                        <div class='col-lg-4 shadow py-1 px-0 mb-1 mx-1'>
+                            {% if i.is_Video %}
+                            <div class=''>
+                                <video class='w-100' autoplay="autoplay" controls="controls" height='150px' preload="preload">
+                                    <source src="{{ i.file.url }}" type="video/mp4" ></source>
+                                </video><br>
+                            </div>
+                            {% else %}
+                                <img class='w-150' src="{{i.file.url}}" alt='' height='100px' style='object-fit:cover;'>
+                            {% endif %}
                             <br>
                             <p class='my-0 mx-1' id='desc'>{{i.intro}}</p>
                             <div class='d-flex w-100' style='justify-content: space-between;'>

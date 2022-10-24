@@ -19,7 +19,7 @@
         </div>
         {% else %}
         <div class='card-body'>
-            <img class='w-100' src="{{ detail_post.file.url }}" alt='' height='300px'>
+            <img class='w-100' src="{{ detail_post.file.url }}" alt='' height='300px' style="object-fit:cover;">
         </div>
         {% endif %}
         <div class='card-body'>
@@ -52,7 +52,7 @@
                     </div>
                     {% else %}
                     <div class='card-body'>
-                        <img class='w-100' src="{{ detail_post.file.url }}" alt='' height='300px'>
+                        <img class='w-100' src="{{ detail_post.file.url }}" alt='' height='300px' >
                     </div><br>
                     {% endif %}
                     <div class='card-body'>
