@@ -29,20 +29,17 @@
                     <div class="card mt-1 col-lg-6">
                         <div class="row">
                             <div class='col col-5'>
-                                <a href="{% url 'phone_detail' i.pk %}">
+                                <a href="{{i.Location}}">
                                     <img class='w-100' src="{{ i.image.url }}" alt="" id="phone">
                                 </a>
                             </div>
                             <div class='col col-7'>
                                 <div class="row">
-                                <p id='desc'><a style="text-decoration:none; color:black;" href="{% url 'phone_detail' i.pk %}">{{i.Description}}</a></p>
+                                <p id='desc'><a style="text-decoration:none; color:black;" href="{{i.Location}}">{{i.Description}}</a></p>
                                 </div>
                                 <div class="row">
                                     <div class='col'>
                                     <p>{{i.Name}}</p>
-                                    </div>
-                                    <div class='col'>
-                                        <p style='color:orange;'><small><small>GHS{{i.Price}}</small></small></p>
                                     </div>
                                 </div>
                             </div>
