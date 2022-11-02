@@ -82,11 +82,9 @@ Shabri store
                                 <center>
                                 <p class='mb-0'><mute>{{i.Name}}</mute></p>
                                 </center>
-                                <a style="text-decoration:none;" href="{% url 'phone_detail' i.pk %}"><img class='w-100'src="{{ i.image.url }}" alt="" id="primg">
+                                <a style="text-decoration:none;" href="{{i.Location}}"><img class='w-100'src="{{ i.image.url }}" alt="" id="primg">
                                 <div class=' px-2'>
                                     <p id='desc'>{{i.Description}}</p>
-                                    <p id='loc'><strong>Ghs</strong> {{i.Price}}</p>
-                                    <p id='loc'><strong>Loc:</strong> {{i.Location}}</p>
                                 </div>
                                 </a>
                             </div>
