@@ -32,10 +32,10 @@ class Items(models.Model):
         return self.Category == "Phones"
         
     def cat1(self):
-        return self.Category == "Accessories"
+        return self.Category == "Health"
     
     def cat2(self):
-        return self.Category == "Sneakers"
+        return self.Category == "Wears"
     
     def cat3(self):
         return self.Category == "Others"

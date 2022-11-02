@@ -14,7 +14,7 @@ def signup(request):
             messages.success(request,'Account created successfully')
             return redirect('login')
         else:
-            messages.success(request,'Account not created')                
+            messages.success(request,'Account not created. Password must be strong, at least 8 characters and must contain numbers,letters and symbols')                
     else:
         frm = SignUpForm()
     context = {'frm':frm}    
