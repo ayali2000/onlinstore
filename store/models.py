@@ -9,8 +9,8 @@ class Items(models.Model):
     Cat = [
         ('Choose item category','Choose item category'),
         ('Phones','Phones'),
-        ('Accessories','Accessories'),
-        ('Sneakers','Sneakers'),
+        ('Health','Health'),
+        ('Wears','Wears'),
         ('Others','Others'),
     ]
     Category = models.CharField(max_length=50, choices=Cat,default='Choose item category')

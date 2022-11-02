@@ -13,8 +13,8 @@ def genindex(request):
 def index(request):
     all_prods = Items.objects.all().exclude(approved=False)
     all_phones = Items.objects.filter(Category='Phones').exclude(approved=False)[:10]
-    all_foot_wears = Items.objects.filter(Category='Accessories').exclude(approved=False)[:10]
-    all_access = Items.objects.filter(Category='Sneakers').exclude(approved=False)[:10]
+    all_health = Items.objects.filter(Category='Health').exclude(approved=False)[:10]
+    all_wears = Items.objects.filter(Category='Wears').exclude(approved=False)[:10]
     others = Items.objects.filter(Category='Others').exclude(approved=False)[:10]
     if request.method == "GET":
         query = request.GET.get("q")
@@ -26,9 +26,9 @@ def index(request):
     context = {'all_prods':all_prods,
             'all_phones':all_phones,
             'query':query,
-            'all_access':all_access,
+            'all_health':all_health,
             'others':others,
-            'all_foot_wears':all_foot_wears,
+            'all_wears':all_wears,
             'queryset':queryset,
             'result':result}
     return render(request,'store/index.html',context)
