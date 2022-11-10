@@ -59,9 +59,9 @@ def detail(request,pk):
 @login_required
 def sell(request):
     frm = SellForm()
-    if request.method == "POST":
+    if request.method == "POST" and request.FILES:
         img = request.POST.get('image')
-        frm = SellForm(request.POST)
+        frm = SellForm(request.POST,request.FILES)
         if frm.is_valid():
             instance=frm.save(commit=False)
             instance.image = "products/"+ img
